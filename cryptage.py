@@ -8,10 +8,10 @@ def algo_eucl(a,b):
     return(r,u,v)
 def inv_modulaire(a,b):
     (r,u,v)=algo_eucl(a,b)
-    while u != int(u) or u < 0 :
-        u= (1-b*v)/a
-        v=v-1
-    return(u)
+    #while u != int(u) or u < 0 :
+    #  u= (1-b*v)/a
+    #   v=v-1
+    return(u)                  
 
 def cryptage_key(p,q,e):
     n=p*q;
