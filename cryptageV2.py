@@ -21,10 +21,15 @@ phi = (p-1)*(q-1)
 
 while PGCD1 != 1 :
         while test == 0 :
+            e = e + 1
             if ((p < e) and (q < e) and ( e < phi)):
                 test = 1
-            e = e + 1
+                print(e)
+                e = e + 1
+        e = e + 1
+        print(e)
         PGCD1 = pgcd(e,phi)
+        print(e)
 
 print("cle de cryptage : n= ",n," e= ",e)
 

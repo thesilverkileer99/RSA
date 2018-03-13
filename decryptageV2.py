@@ -20,15 +20,17 @@ d = d - 1
 
 print("cle de decryptage : n= ",n," d= ",d)
 
-s = input('\nEntrez la liste à déchiffrer : ')
-code = list(map(int, s.split()))
+code = list(input('\nEntrez la liste à déchiffrer : ').split(','))
+
 
 i = 0
 message = ""
 while i < len(code) :
-    lettre_crypt = code[i]
+    lettre_crypt = int(code[i])
     ascii = pow(lettre_crypt,d)%n
-    message = message + str(ascii)
-print("message décrypté : ",message)
+    lettre_decryptee = chr(ascii)
+    message = message + str(lettre_decryptee)
+    i = i + 1
+print(" Voici le message décrypté : ",message)
 
 input('\n\nFin\n\n')
