@@ -1,6 +1,10 @@
+import time
+
 p = int(input("entrer p : "))
 q = int(input("entrer q : "))
 e = int(input("entrer e : "))
+
+tmps1=time.time()
 
 n = p * q
 
@@ -19,7 +23,9 @@ while test == 0 :
 d = d - 1
 
 print("cle de decryptage : n= ",n," d= ",d)
-
+tmps2=time.time() - tmps1
+print("Temps d'exécution = %f" %tmps2)
+tmps1=time.time()
 code = list(input('\nEntrez la liste à déchiffrer : ').split(','))
 
 
@@ -31,6 +37,8 @@ while i < len(code) :
     lettre_decryptee = chr(ascii)
     message = message + str(lettre_decryptee)
     i = i + 1
-print(" Voici le message décrypté : ",message)
 
+tmps2=time.time() - tmps1
+print(" Voici le message décrypté : ",message)
+print("Temps d'exécution = %f" %tmps2)
 input('\n\nFin\n\n')
